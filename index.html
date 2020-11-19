@@ -7,7 +7,7 @@
   <link href="./index.css" rel="stylesheet" />
 </head>
 <body>
-  <div class="main-div">
+  <div class="main-div" id="main-div">
     <!--Navigation Bar-->
     <div class="nav-bar">
       <div>Metvy</div>
@@ -21,15 +21,28 @@
     <div class="content-outer-container">
       <div class="content-right-scroll">
         <div class="right-scroll-path">
-          <div class="right-scroll-thumb"></div>
+          <div class="right-scroll-thumb" id="right-scroll-thumb"></div>
         </div>
       </div>
-      <div class="content-inner-container">
+      <div class="content-inner-container" id="content-inner-container">
+        <!--New Div for Content-->
         <div class="content-description-1">
-          <div class="content-heading">#MetAtMetvy</div>
-          <div class="content-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis autem at facere? Facere eligendi numquam pariatur aspernatur neque! Non quidem sunt id necessitatibus sed, nulla quasi laborum dolore tempore eos.</div>
+          <div class="content-inner-description">
+            <div>
+              <div class="content-heading">#MetAtMetvy</div>
+              <div class="content-description">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis autem at facere? Facere eligendi numquam pariatur aspernatur neque! Non quidem sunt id necessitatibus sed, nulla quasi laborum dolore tempore eos.
+              </div>
+            </div>
+            <div style="color: #212121">HEY</div>
+          </div>
         </div>
-        <div class="content-description-1">YO</div>
+        <!--New Div for Content-->
+
+        <!--New Div for Content-->
+        <div class="content-description-2">YO</div>
+        <!--New Div for Content-->
+
       </div>
     </div>
   <!--Main Container-->
@@ -42,5 +55,17 @@
     </div>
   <!--Footer-->
   </div>
+  <script type="text/javascript">
+      const scrollerContainer = document.getElementById("content-inner-container");
+      scrollerContainer.onscroll = () => {
+        if (scrollerContainer.scrollTop > 350) {
+          document.getElementById("main-div").classList.add("anim-back-color");
+          document.getElementById("right-scroll-thumb").classList.add("anim-back-color");
+        } else {
+          document.getElementById("main-div").classList.remove("anim-back-color");
+          document.getElementById("right-scroll-thumb").classList.remove("anim-back-color");
+        }
+      }
+  </script>
 </body>
 </html>

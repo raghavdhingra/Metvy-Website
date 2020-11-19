@@ -7,6 +7,7 @@ body {
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 .main-div {
+  transition: 1s ease;
   height: 100vh;
   width: 100vw;
   background: linear-gradient(to right, #376259 60%, #fff 60%);
@@ -55,11 +56,15 @@ body {
   color: #fff;
   height: 100%;
 }
-.content-description-1 {
+.content-description-1,
+.content-description-2 {
   display: flex;
   flex-direction: column;
   justify-content: center;
   height: 100%;
+}
+.content-description-2 {
+  text-align: center;
 }
 .content-heading {
   font-size: 4rem;
@@ -67,8 +72,12 @@ body {
 }
 .content-description {
   margin: 1rem 0;
-  width: 700px;
   font-size: 1.2rem;
+}
+.content-inner-description {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 1rem;
 }
 .social-icon-container {
   width: 100vw;
@@ -79,4 +88,17 @@ body {
 .social-icons {
   display: inline-block;
   margin-right: 0.5rem;
+}
+.anim-back-color {
+  transition: 1s ease;
+  /* animation: back-anim 1s ease forwards; */
+  /* background: linear-gradient(to right, #376259 60%, #fff 60%); */
+  background: #000;
+}
+@keyframes back-anim {
+  from {
+    background: linear-gradient(to right, #376259 60%, #fff 60%);
+  }
+  to {
+  }
 }
